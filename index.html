@@ -3,15 +3,95 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>Starter Template - Materialize</title>
+  <title>Quizburst</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
-<body>
-hej
+<body class="">
+
+  <!-- NAVIGANTION START -->
+  <ul id="amnen" class="dropdown-content">
+    <li><a href="#!">matte</a></li>
+    <li><a href="#!">svenska</a></li>
+    <li><a href="#!">three</a></li>
+  </ul>
+  <nav class="teal">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Quizburst</a>
+      <a href="#" data-target="sideselect" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#!">om</a></li>
+        <li><a href="#!">för lärare</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="amnen">ämnen<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+    </nav>
+    <ul class="sidenav" id="sideselect">
+      <li><a href="#">om</a></li>
+      <li><a href="#">för lärare</a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="amnen-mobile">ämnen<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+    <ul id="amnen-mobile" class="dropdown-content">
+      <li><a href="#!">matte</a></li>
+      <li><a href="#!">svenska</a></li>
+      <li><a href="#!">three</a></li>
+    </ul>
+  </div>
+  <!-- HERO -->
+  <div class="section no-pad-bot" style="margin-bottom: 30px;" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center lighten-2 teal-text">Träna på ämnen enkelt.</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Quizburst är en modärn land</h5>
+      </div>
+      <div class="row center">
+        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal darken-4">Get Started</a>
+      </div>
+      <br><br>
+      
+    </div>
+  </div>
+  <!-- ICONS -->
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-teal-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Snabbt.</h5>
+            
+            <p class="light">Quizburst är super snabbt och enkelt att använda byggt för elever från en elev.</p>
+          </div>
+        </div>
+        
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-teal-text"><i class="material-icons">devices_other</i></h2>
+            <h5 class="center">Fungerar på allt</h5>
+            
+            <p class="light">Fungerar på allt, Från mobilen till din dator fungerar lika bra på alla enheter.</p>
+          </div>
+        </div>
+        
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-teal-text"><i class="material-icons">mood</i></h2>
+            <h5 class="center">kul</h5>
+            
+            <p class="light">Det är kul att spela quizburst det är bara frågor och svar man bara tränar och tränar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+    
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
