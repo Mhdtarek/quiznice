@@ -1,0 +1,15 @@
+.clean{
+    background: none;
+    box-shadow: none;
+}
+  
+.breadcrumb{
+    color: rgb(0, 0, 0);
+}
+.breadcrumb:last-child {
+    color: black;
+}
+.breadcrumb::before {
+    color:rgba(0,0,0,0.2);
+    vertical-align: middle;
+}
