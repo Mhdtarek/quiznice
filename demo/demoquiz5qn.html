@@ -54,7 +54,7 @@
             </div>
           </div>
         </nav>
-      <h2 class="center-align">DEMO QUIZ</h2>
+      <h2 class="center-align" id="quiztitle">DEMO QUIZ</h2>
     </div>
       <!--QUIZ-->
       <div class="container">    
@@ -70,25 +70,25 @@
               <form class="qns-form">
     
                 <div class="question">
-                  <p>vad är 11 * 72</p>
+                  <p id="quiz-question-1">vad är 11 * 72</p>
                   <div class="answer">
                     <label>
                       <input type="radio" name="qn1" value="A">
-                      <span>792</span>
+                      <span id="quiz-question-1-q1">792</span>
                     </label>
                   </div>
     
                   <div class="answer">
                     <label>
                       <input type="radio" name="qn1" value="B">
-                      <span>642</span>
+                      <span id="quiz-question-1-q2">642</span>
                     </label>
                   </div>
     
                   <div class="answer">
                     <label>
                       <input type="radio" name="qn1" value="C">
-                      <span>635</span>
+                      <span id="quiz-question-1-q3">635</span>
                     </label>
                   </div>
     
@@ -96,11 +96,11 @@
     
                 <div class="question">
     
-                  <p>hur många minuter är det i en timme?</p>
+                  <p id="quiz-question-2">hur många minuter är det i en timme?</p>
                   <div class="answer">
                     <label>
                       <input type="radio" name="qn2" value="A">
-                      <span>80 minuter</span>
+                      <span id="quiz-question-2-q1">80 minuter</span>
                     </label>
                   </div>
     
@@ -108,26 +108,26 @@
     
                     <label>
                       <input type="radio" name="qn2" value="B">
-                      <span>100 minuter</span>
+                      <span id="quiz-question-2-q2">100 minuter</span>
                     </label>
                   </div>
     
                   <div class="answer">
                     <label>
                       <input type="radio" name="qn2" value="C">
-                      <span>60 minuter</span>
+                      <span id="quiz-question-2-q3">60 minuter</span>
                     </label>
                   </div>
     
                 </div>
     
                 <div class="question">
-                  <p>vad är php?</p>
+                  <p id="quiz-question-3">vad är php?</p>
                   <div class="answer">
     
                     <label>
                       <input type="radio" name="qn3" value="A">
-                      <span>ett företag</span>
+                      <span id="quiz-question-3-q1">ett företag</span>
                     </label>
                   </div>
     
@@ -135,7 +135,7 @@
     
                     <label>
                       <input type="radio" name="qn3" value="B">
-                      <span>ett programmering språk</span>
+                      <span id="quiz-question-3-q2">ett programmering språk</span>
                     </label>
                   </div>
     
@@ -143,19 +143,19 @@
     
                     <label>
                       <input type="radio" name="qn3" value="C">
-                      <span>ett land</span>
+                      <span id="quiz-question-3-q3">ett land</span>
                     </label>
                   </div>
                 </div>
     
                 <div class="question">
     
-                  <p>vad är 92 * 42?</p>
+                  <p id="quiz-question-4">vad är 92 * 42?</p>
                   <div class="answer">
     
                     <label>
                       <input type="radio" name="qn4" value="A">
-                      <span>5825</span>
+                      <span id="quiz-question-4-q1">5825</span>
                     </label>
                   </div>
     
@@ -163,7 +163,7 @@
     
                     <label>
                       <input type="radio" name="qn4" value="B">
-                      <span>3964</span>
+                      <span id="quiz-question-4-q2">3964</span>
                     </label>
                   </div>
     
@@ -171,34 +171,33 @@
     
                     <label>
                       <input type="radio" name="qn4" value="C">
-                      <span>3864</span>
+                      <span id="quiz-question-4-q3">3864</span>
                     </label>
                   </div>
     
                 </div>
-    
-    
+
                 <div class="question">
     
-                  <p>hur många länder finns det?</p>
+                  <p id="quiz-question-5">hur många länder finns det?</p>
                   <div class="answer">
                     <label>
                       <input type="radio" name="qn5" value="A">
-                      <span>195</span>
+                      <span id="quiz-question-5-q1">195</span>
                     </label>
                   </div>
     
                   <div class="answer">
                     <label>
                       <input type="radio" name="qn5" value="B">
-                      <span>197</span>
+                      <span id="quiz-question-5-q2">197</span>
                     </label>
                   </div>
     
                   <div class="answer">
                     <label>
                       <input type="radio" name="qn5" value="C">
-                      <span>189</span>
+                      <span id="quiz-question-5-q3">189</span>
                     </label>
                   </div>
     
@@ -216,10 +215,63 @@
 
       <!--SCRIPT-->
       <script>
-    const quizForm = document.querySelector('.qns-form');
+        // top data
+      fetch("/quiz-data/demo.json")
+        .then(response => response.json())
+        .then(data => {
+          document.querySelector("#quiztitle").innerHTML = data[0].quiztitle
+        })
+    // questions
+  fetch("/quiz-data/demo.json")
+  .then(response => response.json())
+  .then(data => {
+    // question 1
+    document.querySelector("#quiz-question-1").innerHTML = data[1].title
+    document.querySelector("#quiz-question-1-q1").innerHTML = data[1].qn1
+    document.querySelector("#quiz-question-1-q2").innerHTML = data[1].qn2
+    document.querySelector("#quiz-question-1-q3").innerHTML = data[1].qn3
+    // question 2
+    document.querySelector("#quiz-question-2").innerHTML = data[2].title
+    document.querySelector("#quiz-question-2-q1").innerHTML = data[2].qn1
+    document.querySelector("#quiz-question-2-q2").innerHTML = data[2].qn2
+    document.querySelector("#quiz-question-2-q3").innerHTML = data[2].qn3
+    // question 3
+    document.querySelector("#quiz-question-3").innerHTML = data[3].title
+    document.querySelector("#quiz-question-3-q1").innerHTML = data[3].qn1
+    document.querySelector("#quiz-question-3-q2").innerHTML = data[3].qn2
+    document.querySelector("#quiz-question-3-q3").innerHTML = data[3].qn3
+    // question 4
+    document.querySelector("#quiz-question-4").innerHTML = data[4].title
+    document.querySelector("#quiz-question-4-q1").innerHTML = data[4].qn1
+    document.querySelector("#quiz-question-4-q2").innerHTML = data[4].qn2
+    document.querySelector("#quiz-question-4-q3").innerHTML = data[4].qn3
+    // question 5
+    document.querySelector("#quiz-question-5").innerHTML = data[5].title
+    document.querySelector("#quiz-question-5-q1").innerHTML = data[5].qn1
+    document.querySelector("#quiz-question-5-q2").innerHTML = data[5].qn2
+    document.querySelector("#quiz-question-5-q3").innerHTML = data[5].qn3
+  })
+
+ //quiz calc
+
+fetch("/quiz-data/demo.json")
+.then(response => response.json())
+.then(data => {
+let answer1 = data[1].answer;
+let answer2 = data[2].answer;
+let answer3 = data[3].answer;
+let answer4 = data[4].answer;
+let answer5 = data[5].answer;
+console.log(answer1)
+console.log(answer2)
+console.log(answer3)
+console.log(answer4)
+console.log(answer5)
+
+const quizForm = document.querySelector('.qns-form');
 const resultPanel = document.querySelector('#result');
 const Marks = document.querySelector('span.marks');
-const testAnswers = ['A', 'C', 'B', 'C', 'B'];
+const testAnswers = [answer1 , answer2, answer3, answer4, answer5];
 
 quizForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -256,21 +308,14 @@ quizForm.addEventListener('submit', e => {
   quizForm.reset();
 
 });
+})
 
+</script>
+<!--JS LINK-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="../js/materialize.js"></script>
+<script src="../js/init.js"></script>
+<script src="/js/config.js"></script>
 
-
-
-
-
-
-
-      </script>
-
-
-      <!--JS LINK-->
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="../js/materialize.js"></script>
-    <script src="../js/init.js"></script>
-    
 </body>
 </html>
