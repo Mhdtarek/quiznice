@@ -1,2 +1,3 @@
-document.querySelector('title').textContent = "quiznice";
-document.querySelector('.brand-logo').textContent = "quiznice";
+document.querySelector("title").textContent = "temp";
+document.querySelector(".brand-logo").textContent = "temp";
+document.querySelector("#name-logo").textContent = "temp";
