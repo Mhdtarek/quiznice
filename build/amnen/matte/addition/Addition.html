@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quizburst</title>
+    <!--CSS LINK-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href="/css/quiz-style.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+</head>
+<body>
+      <!-- NAVIGANTION-->
+  <ul id="amnen" class="dropdown-content">
+    <li><a href="/amnen/Matte.html">matte</a></li>
+    <li><a href="/amnen/SV.html">svenska</a></li>
+    <li><a href="/amnen/EN.html">Engelska</a></li>
+    <li><a href="/amnen/SO.html">SO</a></li>
+    <li><a href="/amnen/NO.html">NO</a></li>
+  </ul>
+  <nav class="teal">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="/index.html" class="brand-logo">Quizburst</a>
+      <a href="#" data-target="sideselect" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/Om.html">om</a></li>
+        <li><a class="dropdown-trigger" href="#!" data-target="amnen">ämnen<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+    </div>
+    </nav>
+    <ul class="sidenav" id="sideselect">
+      <li><a href="/Om.html">om</a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="amnen-mobile">ämnen<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+    <ul id="amnen-mobile" class="dropdown-content">
+      <li><a href="/amnen/Matte.html">matte</a></li>
+      <li><a href="/amnen/SV.html">svenska</a></li>
+      <li><a href="/amnen/EN.html">Engelska</a></li>
+      <li><a href="/amnen/SO.html">SO</a></li>
+      <li><a href="/amnen/NO.html">NO</a></li>
+    </ul>
+  </div>
+  <!-- BODY START -->
+  <h3 class="center-align">hur svårt?</h3>
+  <h5 class="center-align">Addition</h5>
+    <div class="container">
+      <nav class="clean">
+        <div class="nav-wrapper">
+          <div class="col s12">
+            <a href="/amnen/amnen.html" class="breadcrumb">Ämnen</a>
+            <a href="/amnen/Matte.html" class="breadcrumb">Matte</a>
+            <a href="/amnen/Matte/addition/Addition.html" class="breadcrumb">Addition</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  <div class="row">
+      <div class=" card teal accent-4 hoverable col s12 m3">
+        <div class="card-content white-text">
+          <span class="card-title">nybörjare</span>
+          <p>från klass f - 2.</p>
+        </div>
+        <div class="card-action">
+          <a href="#" class="waves-effect waves-light white-text">Spela</a>
+        </div>
+      </div>
+      <div class=" card teal accent-4 hoverable col s12 m4 offset-m1">
+        <div class="card-content white-text">
+          <span class="card-title">mellanliggande</span>
+          <p>från klass 3 - 4.</p>
+        </div>
+        <div class="card-action">
+          <a href="#" class="waves-effect waves-light white-text">Spela</a>
+        </div>
+      </div>
+      <div class=" card teal accent-4 hoverable col s12 m3 offset-m1">
+        <div class="card-content white-text">
+          <span class="card-title">expert</span>
+          <p>från klass 5 - 6.</p>
+        </div>
+        <div class="card-action">
+          <a href="#" class="waves-effect waves-light white-text">Spela</a></div>
+      </div>
+
+    </div>
+  <!-- BODY END -->
+  <!--JS LINK-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/js/materialize.js"></script>
+  <script src="/js/init.js"></script>
+  <script src="/js/config.js"></script>
+</body>
+</html>
