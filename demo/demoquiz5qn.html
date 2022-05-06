@@ -65,9 +65,8 @@
             <div class="card-panel hide" id="result">
               <h5 class="center"><span class="teal-text marks">0%</span> korrekt</h5>
             </div>
-    
             <div class="card-panel">
-              <form class="qns-form">
+              <form id="test" class="qns-form">
     
                 <div class="question">
                   <p id="quiz-question-1">vad är 11 * 72</p>
@@ -200,9 +199,10 @@
                       <span id="quiz-question-5-q3">189</span>
                     </label>
                   </div>
-    
+                  
                 </div>
-                <button class="btn right">Submit answer</button>
+                <button onclick="printContent()" style="margin-top: 25px;" class="btn left">skriv ut</button>
+                <button style="margin-top: 25px;" class="btn right">lämna in</button>
               </form>
               <div class="clearfix"></div>
             </div>
@@ -214,6 +214,17 @@
       </div>
 
       <!--SCRIPT-->
+      <script>
+        // print data
+        function printContent(){
+         var printContent = document.getElementById("test").innerHTML;
+         var originalContent = window.document.body.innerHTML;
+         window.document.body.innerHTML = printContent;
+         window.print();
+         window.document.body.innerHTML = originalContent;
+          };
+    
+      </script>
       <script>
         // top data
       fetch("/quiz-data/demo.json")
