@@ -54,7 +54,7 @@
             </div>
           </div>
         </nav>
-      <h2 class="center-align" id="quiztitle">DEMO QUIZ</h2>
+      <h2 class="center-align" id="quiz-title">DEMO QUIZ</h2>
     </div>
       <!--QUIZ-->
       <div class="container">    
@@ -176,7 +176,7 @@
                   </div>
     
                 </div>
-
+                
                 <div class="question">
     
                   <p id="quiz-question-5">hur många länder finns det?</p>
@@ -215,63 +215,10 @@
 
       <!--SCRIPT-->
       <script>
-        // top data
-      fetch("/quiz-data/demo.json")
-        .then(response => response.json())
-        .then(data => {
-          document.querySelector("#quiztitle").innerHTML = data[0].quiztitle
-        })
-    // questions
-  fetch("/quiz-data/demo.json")
-  .then(response => response.json())
-  .then(data => {
-    // question 1
-    document.querySelector("#quiz-question-1").innerHTML = data[1].title
-    document.querySelector("#quiz-question-1-q1").innerHTML = data[1].qn1
-    document.querySelector("#quiz-question-1-q2").innerHTML = data[1].qn2
-    document.querySelector("#quiz-question-1-q3").innerHTML = data[1].qn3
-    // question 2
-    document.querySelector("#quiz-question-2").innerHTML = data[2].title
-    document.querySelector("#quiz-question-2-q1").innerHTML = data[2].qn1
-    document.querySelector("#quiz-question-2-q2").innerHTML = data[2].qn2
-    document.querySelector("#quiz-question-2-q3").innerHTML = data[2].qn3
-    // question 3
-    document.querySelector("#quiz-question-3").innerHTML = data[3].title
-    document.querySelector("#quiz-question-3-q1").innerHTML = data[3].qn1
-    document.querySelector("#quiz-question-3-q2").innerHTML = data[3].qn2
-    document.querySelector("#quiz-question-3-q3").innerHTML = data[3].qn3
-    // question 4
-    document.querySelector("#quiz-question-4").innerHTML = data[4].title
-    document.querySelector("#quiz-question-4-q1").innerHTML = data[4].qn1
-    document.querySelector("#quiz-question-4-q2").innerHTML = data[4].qn2
-    document.querySelector("#quiz-question-4-q3").innerHTML = data[4].qn3
-    // question 5
-    document.querySelector("#quiz-question-5").innerHTML = data[5].title
-    document.querySelector("#quiz-question-5-q1").innerHTML = data[5].qn1
-    document.querySelector("#quiz-question-5-q2").innerHTML = data[5].qn2
-    document.querySelector("#quiz-question-5-q3").innerHTML = data[5].qn3
-  })
-
- //quiz calc
-
-fetch("/quiz-data/demo.json")
-.then(response => response.json())
-.then(data => {
-let answer1 = data[1].answer;
-let answer2 = data[2].answer;
-let answer3 = data[3].answer;
-let answer4 = data[4].answer;
-let answer5 = data[5].answer;
-console.log(answer1)
-console.log(answer2)
-console.log(answer3)
-console.log(answer4)
-console.log(answer5)
-
-const quizForm = document.querySelector('.qns-form');
+    const quizForm = document.querySelector('.qns-form');
 const resultPanel = document.querySelector('#result');
 const Marks = document.querySelector('span.marks');
-const testAnswers = [answer1 , answer2, answer3, answer4, answer5];
+const testAnswers = ['A', 'C', 'B', 'C', 'B'];
 
 quizForm.addEventListener('submit', e => {
   e.preventDefault();
@@ -308,15 +255,21 @@ quizForm.addEventListener('submit', e => {
   quizForm.reset();
 
 });
-})
 
-</script>
-<!--JS LINK-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="../js/materialize.js"></script>
-<script src="../js/init.js"></script>
-<script src="/js/config.js"></script>
-<script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
 
+
+
+
+
+
+
+      </script>
+
+
+      <!--JS LINK-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../js/materialize.js"></script>
+    <script src="../js/init.js"></script>
+    
 </body>
 </html>
