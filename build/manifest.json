@@ -1,16 +1,23 @@
 {
   "name": "quiznice",
   "short_name": "quiznice",
-  "start_url": "/?home=true",
+  "start_url": "/app/index.html",
   "icons": [
     {
       "src": "/img/QUIZNICE.PNG",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/img/QUIZNICE.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
   "theme_color": "#009688",
   "background_color": "#4db6ac",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait"
 }
