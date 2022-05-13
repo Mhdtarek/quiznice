@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="print"/>
+    <link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/css/materialize.min.css" type="text/css" rel="stylesheet" media="print"/>
     <link rel="stylesheet" href="/css/quiz-style.css">
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
     <link rel="manifest" href="/manifest.json">
@@ -24,7 +24,7 @@
       <nav class="teal">
       <div class="container">
         <div class="nav-wrapper">
-          <a href="/index.html" class="brand-logo">Quizburst</a>
+          <a href="/index.html" class="brand-logo">Quiznice</a>
           <a href="#" data-target="sideselect" class="sidenav-trigger"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="/Om.html">om</a></li>
@@ -51,22 +51,22 @@
         <nav class="clean">
           <div class="nav-wrapper">
             <div class="col s12">
-              <a href="#!" class="breadcrumb">First</a>
-              <a href="#!" class="breadcrumb">Second</a>
-              <a href="#!" class="breadcrumb">Third</a>
-              <a href="#!" class="breadcrumb">Fourth</a>
+              <a href="/app/index.html" class="breadcrumb">Ämnen</a>
+              <a href="/app/Matte.html" class="breadcrumb">Matte</a>
+              <a href="/app/matte/addition/Addition.html" class="breadcrumb">Addition</a>
+              <a href="/app/matte/addition/1-10_10qn.html" class="breadcrumb">1 - 10</a>
             </div>
           </div>
         </nav>
       <h2 class="center-align section" id="quiztitle">DEMO QUIZ</h2>
   </div>
 
-  <h6 class="center-align" id="quiztitle">Memory</h6>
-  <div class="divider"></div>
+  <h6 class="center-align hide" id="quiztitle">Memory</h6>
+  <div class="divider hide"></div>
 
 <!-- memory-->
 
-<div class="container wrap-wrap-warp section">
+<div class="container wrap-wrap-warp section hide">
 <div class="memory">
 <div class="meta">
   <div>flytt: <span class="moves"></span></div>
@@ -629,7 +629,7 @@
   <!--quiz -->
 
   <script>
-  fetch("/quiz-data/demoqn10.json")
+  fetch("/quiz-data/matte/addition/1-10.json")
  .then(response => response.json())
  .then(data => {
  
@@ -701,12 +701,12 @@ submitBtn.addEventListener('click', () => {
   <!--test-->
   <script>
    // top data
- fetch("/quiz-data/demoqn10.json")
+ fetch("/quiz-data/matte/addition/1-10.json")
   .then(response => response.json())
   .then(data => {
   })
     // questions
-  fetch("/quiz-data/demoqn10.json")
+  fetch("/quiz-data/matte/addition/1-10.json")
   .then(response => response.json())
   .then(data => {
     // question 1

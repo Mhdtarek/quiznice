@@ -24,8 +24,7 @@ body {
 }
 
 .wrap-wrap-warp {
-  margin-bottom: 50px;
-  
+  margin-bottom: 275px;
 }
 .game {
   width: 100%;
@@ -45,6 +44,7 @@ body {
   transform: scale(1);
   transition: transform 0.3s;
   display: grid;
+  height: 210px;
 }
 .front,
 .back {
@@ -75,7 +75,7 @@ body {
 }
 @media all and (max-width: 500px) {
   .card {
-    width: calc(33.33% - 10px);
+    width: calc(50% - 10px);
     height: calc(33.33% - 10px);
     margin: 5px;
     position: relative;
@@ -85,7 +85,7 @@ body {
     display: grid;
   }
   .wrap-wrap-warp {
-    margin-bottom: 175px;
+    margin-bottom: 420px;
     
   }
 }
