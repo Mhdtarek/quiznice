@@ -159,12 +159,6 @@
               <span class="black-text" for="c" id="c_text">Answer</span>
             </label>
           </div>
-          <div class="row">
-          <label class="btn teal lighten-5 col s12">
-            <input type="radio" name="answer" id="d" class="answer">
-            <span class="black-text" for="d" id="d_text">Answer</span>
-          </label>
-          </div>
         </ul>
       </div>
       <button style="margin: 0 auto;" class="btn-large" id="submit">Lämna in</button>
@@ -214,12 +208,6 @@
                       <span id="quiz-question-1-q3">635</span>
                     </label>
                   </div>
-                  <div class="answer">
-                    <label>
-                      <input type="radio" name="qn1" value="d">
-                      <span id="quiz-question-1-q4">635</span>
-                    </label>
-                  </div>
                 </div>
     
                 <div class="question">
@@ -244,12 +232,6 @@
                     <label>
                       <input type="radio" name="qn2" value="c">
                       <span id="quiz-question-2-q3">60 minuter</span>
-                    </label>
-                  </div>
-                  <div class="answer">
-                    <label>
-                      <input type="radio" name="qn2" value="d">
-                      <span id="quiz-question-2-q4">635</span>
                     </label>
                   </div>
                 </div>
@@ -280,12 +262,6 @@
                     </label>
                   </div>
                 </div>
-                <div class="answer">
-                  <label>
-                    <input type="radio" name="qn3" value="d">
-                    <span id="quiz-question-3-q4">635</span>
-                  </label>
-                </div>
                 <div class="question">
                   <p id="quiz-question-4">vad är 92 * 42?</p>
                   <div class="answer">
@@ -307,12 +283,6 @@
                     <label>
                       <input type="radio" name="qn4" value="c">
                       <span id="quiz-question-4-q3">3864</span>
-                    </label>
-                  </div>
-                  <div class="answer">
-                    <label>
-                      <input type="radio" name="qn4" value="d">
-                      <span id="quiz-question-4-q4">635</span>
                     </label>
                   </div>
                 </div>
@@ -340,12 +310,6 @@
                       <span id="quiz-question-5-q3">189</span>
                     </label>
                   </div>
-                  <div class="answer">
-                    <label>
-                      <input type="radio" name="qn5" value="d">
-                      <span id="quiz-question-5-q4">635</span>
-                    </label>
-                  </div>   
                 </div>
 
                 <div class="question">
@@ -371,12 +335,6 @@
                       <span id="quiz-question-6-q3">189</span>
                     </label>
                   </div>
-                  <div class="answer">
-                    <label>
-                      <input type="radio" name="qn6" value="d">
-                      <span id="quiz-question-6-q4">635</span>
-                    </label>
-                  </div> 
                 </div>
 
                 <div class="question">
@@ -400,12 +358,6 @@
                     <label>
                       <input type="radio" name="qn7" value="c">
                       <span id="quiz-question-7-q3">189</span>
-                    </label>
-                  </div>
-                  <div class="answer">
-                    <label>
-                      <input type="radio" name="qn7" value="d">
-                      <span id="quiz-question-7-q4">635</span>
                     </label>
                   </div>
                 </div>
@@ -433,12 +385,6 @@
                       <span id="quiz-question-8-q3">189</span>
                     </label>
                   </div>
-                  <div class="answer">
-                    <label>
-                      <input type="radio" name="qn8" value="d">
-                      <span id="quiz-question-8-q4">635</span>
-                    </label>
-                  </div> 
                 </div>
 
                 <div class="question">
@@ -464,12 +410,6 @@
                       <span id="quiz-question-9-q3">189</span>
                     </label>
                   </div>
-                  <div class="answer">
-                    <label>
-                      <input type="radio" name="qn9" value="d">
-                      <span id="quiz-question-9-q4">635</span>
-                    </label>
-                  </div>
                 </div>
 
                 <div class="question">
@@ -493,12 +433,6 @@
                     <label>
                       <input type="radio" name="qn10" value="c">
                       <span id="quiz-question-10-q3">189</span>
-                    </label>
-                  </div>
-                  <div class="answer">
-                    <label>
-                      <input type="radio" name="qn10" value="d">
-                      <span id="quiz-question-10-q4">635</span>
                     </label>
                   </div>
                 </div>
@@ -686,7 +620,6 @@ const questionEl = document.getElementById('question')
 const a_text = document.getElementById('a_text')
 const b_text = document.getElementById('b_text')
 const c_text = document.getElementById('c_text')
-const d_text = document.getElementById('d_text')
 const submitBtn = document.getElementById('submit')
 
 
@@ -705,7 +638,6 @@ function loadQuiz() {
     a_text.innerText = quizinfo.qn1
     b_text.innerText = quizinfo.qn2
     c_text.innerText = quizinfo.qn3
-    d_text.innerText = quizinfo.qn4
 }
 
 function deselectAnswers() {
@@ -761,61 +693,51 @@ submitBtn.addEventListener('click', () => {
     document.querySelector("#quiz-question-1-q1").innerHTML = data[0].qn1
     document.querySelector("#quiz-question-1-q2").innerHTML = data[0].qn2
     document.querySelector("#quiz-question-1-q3").innerHTML = data[0].qn3
-    document.querySelector("#quiz-question-1-q4").innerHTML = data[0].qn4
     // question 2
     document.querySelector("#quiz-question-2").innerHTML = data[1].title
     document.querySelector("#quiz-question-2-q1").innerHTML = data[1].qn1
     document.querySelector("#quiz-question-2-q2").innerHTML = data[1].qn2
     document.querySelector("#quiz-question-2-q3").innerHTML = data[1].qn3
-    document.querySelector("#quiz-question-2-q4").innerHTML = data[1].qn4
     // question 3
     document.querySelector("#quiz-question-3").innerHTML = data[2].title
     document.querySelector("#quiz-question-3-q1").innerHTML = data[2].qn1
     document.querySelector("#quiz-question-3-q2").innerHTML = data[2].qn2
     document.querySelector("#quiz-question-3-q3").innerHTML = data[2].qn3
-    document.querySelector("#quiz-question-3-q4").innerHTML = data[2].qn4
     // question 4
     document.querySelector("#quiz-question-4").innerHTML = data[3].title
     document.querySelector("#quiz-question-4-q1").innerHTML = data[3].qn1
     document.querySelector("#quiz-question-4-q2").innerHTML = data[3].qn2
     document.querySelector("#quiz-question-4-q3").innerHTML = data[3].qn3
-    document.querySelector("#quiz-question-4-q4").innerHTML = data[3].qn4
     // question 5
     document.querySelector("#quiz-question-5").innerHTML = data[4].title
     document.querySelector("#quiz-question-5-q1").innerHTML = data[4].qn1
     document.querySelector("#quiz-question-5-q2").innerHTML = data[4].qn2
     document.querySelector("#quiz-question-5-q3").innerHTML = data[4].qn3
-    document.querySelector("#quiz-question-5-q4").innerHTML = data[4].qn4
     // question 6
     document.querySelector("#quiz-question-6").innerHTML = data[5].title
     document.querySelector("#quiz-question-6-q1").innerHTML = data[5].qn1
     document.querySelector("#quiz-question-6-q2").innerHTML = data[5].qn2
     document.querySelector("#quiz-question-6-q3").innerHTML = data[5].qn3
-    document.querySelector("#quiz-question-6-q4").innerHTML = data[5].qn4
     // question 7
     document.querySelector("#quiz-question-7").innerHTML = data[6].title
     document.querySelector("#quiz-question-7-q1").innerHTML = data[6].qn1
     document.querySelector("#quiz-question-7-q2").innerHTML = data[6].qn2
     document.querySelector("#quiz-question-7-q3").innerHTML = data[6].qn3
-    document.querySelector("#quiz-question-7-q4").innerHTML = data[6].qn4
     // question 8
     document.querySelector("#quiz-question-8").innerHTML = data[7].title
     document.querySelector("#quiz-question-8-q1").innerHTML = data[7].qn1
     document.querySelector("#quiz-question-8-q2").innerHTML = data[7].qn2
     document.querySelector("#quiz-question-8-q3").innerHTML = data[7].qn3
-    document.querySelector("#quiz-question-8-q4").innerHTML = data[7].qn4
     // question 9
     document.querySelector("#quiz-question-9").innerHTML = data[8].title
     document.querySelector("#quiz-question-9-q1").innerHTML = data[8].qn1
     document.querySelector("#quiz-question-9-q2").innerHTML = data[8].qn2
     document.querySelector("#quiz-question-9-q3").innerHTML = data[8].qn3
-    document.querySelector("#quiz-question-9-q4").innerHTML = data[8].qn4
     // question 10
     document.querySelector("#quiz-question-10").innerHTML = data[9].title
     document.querySelector("#quiz-question-10-q1").innerHTML = data[9].qn1
     document.querySelector("#quiz-question-10-q2").innerHTML = data[9].qn2
     document.querySelector("#quiz-question-10-q3").innerHTML = data[9].qn3
-    document.querySelector("#quiz-question-10-q4").innerHTML = data[9].qn4
   })
 
  //quiz calc
